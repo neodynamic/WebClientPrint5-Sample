@@ -131,7 +131,7 @@ public class DemoPrintCommandsHandler : IHttpHandler {
     //sid: user session id who is requesting a ClientPrintJob
     private void ClientPrint(string sid)
     {
-        if (WebClientPrint.ProcessPrintJob(System.Web.HttpContext.Current.Request.Form.ToString()))
+        if (WebClientPrint.ProcessPrintJob(System.Web.HttpContext.Current.Request.Url.Query))
         {
             HttpApplicationState app = HttpContext.Current.Application;
 
