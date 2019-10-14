@@ -96,7 +96,7 @@ Public Class DemoPrintCommandsHandler : Implements IHttpHandler
 
     'sid: user session id who is requesting a ClientPrintJob
     Private Sub ClientPrint(sid As String)
-        If WebClientPrint.ProcessPrintJob(System.Web.HttpContext.Current.Request.Form.ToString) Then
+        If WebClientPrint.ProcessPrintJob(System.Web.HttpContext.Current.Request.Url.Query) Then
             Dim app As HttpApplicationState = HttpContext.Current.Application
 
             'Create a ClientPrintJob obj that will be processed at the client side by the WCPP
