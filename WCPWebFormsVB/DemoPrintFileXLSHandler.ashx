@@ -1,4 +1,4 @@
-﻿<%@ WebHandler Language="VB" Class="DemoPrintFileDOCHandler" %>
+﻿<%@ WebHandler Language="VB" Class="DemoPrintFileXLSHandler" %>
 
 Imports System
 Imports System.Web
